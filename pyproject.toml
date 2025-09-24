@@ -1,0 +1,18 @@
+[project]
+name = "repcb"
+version = "0.1.0"
+description = "Modular PCB import and web viewer"
+authors = [{ name = "RePCB" }]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy>=1.4",
+    "pandas",
+    "python-multipart",
+    "openpyxl",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
