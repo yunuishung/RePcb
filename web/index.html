@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>RePCB Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>RePCB — 모듈형 PCB 업로드 & 웹 뷰어</h1>
+    </header>
+    <main>
+      <section id="upload-panel">
+        <div id="dropzone" class="dropzone">
+          <p>여러 파일(BOM/좌표/자삽/Gerber ZIP)을 이곳으로 드래그 앤 드롭</p>
+          <input type="file" id="fileInput" multiple />
+        </div>
+        <div id="upload-status"></div>
+      </section>
+      <section id="viewer-panel">
+        <div id="toolbar">
+          <button id="fitButton">Fit</button>
+          <label><input type="checkbox" id="singleColorToggle" /> Single Color</label>
+          <label><input type="checkbox" id="previewToggle" /> 중앙 10% 미리보기</label>
+          <div class="slider-group">
+            <label for="zoomSlider">Zoom</label>
+            <input type="range" id="zoomSlider" min="0.1" max="10" step="0.1" value="1" />
+          </div>
+        </div>
+        <div id="layers"></div>
+        <canvas id="viewer" width="800" height="600"></canvas>
+        <div id="progress"></div>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
